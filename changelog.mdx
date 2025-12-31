@@ -1,0 +1,126 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to Paradoha gh, ensuring you stay informed about new features and fixes.
+---
+
+## Stay Up to Date
+
+Paradoha gh evolves quickly to help you manage project documentation effectively. You receive automatic notifications for major releases through your dashboard at `https://dashboard.example.com`. Check this changelog regularly to see new features, improvements, and fixes that enhance your documentation workflow.
+
+<Callout kind="tip">
+  Subscribe to RSS feed at `/changelog/rss` or enable email notifications in your account settings to never miss an update.
+</Callout>
+
+## Recent Releases
+
+Review the latest versions below. Each release includes detailed changes to keep your documentation space current and performant.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added real-time collaboration editing, allowing multiple users to edit docs simultaneously with live cursors.
+- Introduced version history with diff viewer, so you can compare changes across revisions easily.
+
+## Improvements
+
+- Enhanced search performance by `>50%` for large documentation spaces.
+- Updated UI components with better dark mode support and accessibility improvements.
+
+## Bug Fixes
+
+- Fixed markdown rendering issues with nested lists and tables.
+- Resolved export failures for PDFs containing images.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["bugfix", "security"]}>
+
+## Security Fixes
+
+- Patched potential XSS vulnerability in custom HTML embeds (CVE-2024-XXXX).
+
+## Bug Fixes
+
+- Corrected authentication token refresh logic during long sessions.
+- Fixed sidebar navigation collapse on mobile devices.
+
+## Improvements
+
+- Optimized database queries for faster page loads in spaces with thousands of docs.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Launched core documentation editor with markdown support, templates, and AI-assisted writing.
+- Integrated GitHub sync for version-controlled docs.
+
+## Breaking Changes
+
+- Updated API endpoints from `/v0/` to `/v1/` prefix. Migrate your integrations using the guide at `/docs/migration`.
+
+## Initial Setup
+
+- Basic authentication with API keys and OAuth.
+
+</Update>
+
+## Upgrade Instructions
+
+Follow these steps to upgrade Paradoha gh smoothly.
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+    Export your documentation space via the dashboard.
+  </Step>
+  <Step title="Update Package" icon="package">
+    
+````bash
+npm install paradoha-gh@latest
+````
+
+    
+````bash
+yarn add paradoha-gh@latest
+````
+  </Step>
+  <Step title="Run Migrations" icon="git-branch">
+    Execute database migrations:
+    
+````bash
+npx paradoha-gh migrate
+````
+  </Step>
+  <Step title="Restart Server" icon="refresh-cw">
+    Restart your Paradoha gh instance and verify at `https://dashboard.example.com`.
+  </Step>
+</Steps>
+
+## Key Highlights
+
+<Columns cols={3}>
+  <Card title="Collaboration" icon="users" href="#recent-releases">
+    Real-time editing transforms team workflows.
+  </Card>
+  <Card title="Performance" icon="zap" href="#recent-releases">
+    Search and load times improved significantly.
+  </Card>
+  <Card title="Security" icon="shield" href="#recent-releases">
+    Latest patches keep your docs safe.
+  </Card>
+</Columns>
+
+## Upcoming Changes
+
+<Expandable title="Preview of v1.3.0" default-open="false">
+
+Expect AI-powered content generation and advanced analytics in the next release (target: November 2024). Prepare by reviewing your current workflows.
+
+<Callout kind="info">
+  Provide feedback on GitHub at `https://github.com/example/paradoha-gh` to influence priorities.
+</Callout>
+
+</Expandable>

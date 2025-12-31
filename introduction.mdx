@@ -1,0 +1,109 @@
+---
+title: Introduction to Paradoha gh
+description: Discover Paradoha gh, a comprehensive documentation platform designed to help you organize and manage project documentation efficiently. Learn about its key features and how it streamlines your workflow.
+---
+
+## Overview
+
+Paradoha gh empowers you to create, organize, and maintain project documentation in one centralized space. You build structured docs with version control, real-time collaboration, and powerful search capabilities. Whether you manage open-source projects or internal team knowledge bases, Paradoha gh simplifies your workflow and ensures your documentation stays up-to-date and accessible.
+
+This platform integrates seamlessly with your GitHub repositories, automatically syncing changes and generating MDX-powered pages. You focus on content while Paradoha gh handles hosting, search indexing, and customization.
+
+<Callout kind="info">
+  Primary brand color: <code>#3B82F6</code>. Use this hex value for consistent theming across your docs, buttons, and logos.
+</Callout>
+
+## Key Features
+
+Paradoha gh offers essential tools to streamline documentation management.
+
+<Columns cols={3}>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Sync directly with GitHub. Every commit updates your live docs automatically.
+  </Card>
+  <Card title="Real-time Collaboration" icon="users" href="#collaboration">
+    Invite team members to edit simultaneously with live previews.
+  </Card>
+  <Card title="Advanced Search" icon="search" href="#search">
+    Full-text search across all docs with syntax highlighting for code snippets.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Get started with Paradoha gh in minutes.
+
+<Steps>
+  <Step title="Connect Repository" icon="github">
+    Link your GitHub repo in the dashboard at <code>https://dashboard.example.com</code>.
+
+    ```bash
+    # Generate API token
+    gh auth login --scopes repo
+    ```
+  </Step>
+  <Step title="Configure Docs" icon="settings">
+    Create your first MDX file in <code>/docs/introduction.mdx</code>.
+
+````mdx
+---
+title: My Project
+description: Overview of my project docs.
+---
+## Welcome
+Start writing here.
+````
+
+  </Step>
+  <Step title="Publish" icon="rocket">
+    Push changes to trigger a live build.
+
+    <CodeGroup tabs="GitHub CLI,npm">
+      ```bash
+      gh repo deploy --ref main
+      ```
+      ```bash
+      npm run deploy
+      ```
+    </CodeGroup>
+  </Step>
+</Steps>
+
+## Benefits for Your Workflow
+
+Discover how Paradoha gh transforms documentation.
+
+<Tabs>
+  <Tab title="Teams" icon="users">
+    Centralize knowledge to reduce onboarding time by 50%. Share editable links without version conflicts.
+  </Tab>
+  <Tab title="Developers" icon="code">
+    Embed live code examples and API references. Use components like <code>&lt;CodeGroup&gt;</code> for multi-language support.
+  </Tab>
+  <Tab title="Open Source" icon="github">
+    Auto-generate changelogs and contribute guidelines. Attract more contributors with polished docs.
+  </Tab>
+</Tabs>
+
+## Next Steps
+
+Explore more to build your documentation site.
+
+<Columns cols={2}>
+  <Card title="Quickstart Guide" icon="zap" href="/quickstart">
+    Set up your first project in under 5 minutes.
+  </Card>
+  <Card title="Authentication" icon="lock" href="/authentication">
+    Secure your docs with API keys and OAuth.
+  </Card>
+  <Card title="Customization" icon="palette" href="/configuration">
+    Apply brand colors like <code>#3B82F6</code> and custom themes.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Track updates and new features.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Customize your sidebar navigation in the dashboard to match your project structure. Start with essential pages like Quickstart and Authentication.
+</Callout>

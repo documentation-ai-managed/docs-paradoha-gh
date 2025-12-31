@@ -1,0 +1,157 @@
+---
+title: Getting Started with Paradoha gh
+description: Set up your Paradoha gh account and create your first documentation space in just a few minutes to begin organizing your project docs.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following ready:
+
+<Callout kind="info">
+
+- A modern web browser like Chrome, Firefox, or Safari
+- An email address for account verification
+- Optional: Paradoha gh CLI installed via `npm install -g @paradoha-gh/cli` for advanced file uploads
+
+</Callout>
+
+Paradoha gh requires no complex setup. You start by creating an account at `https://app.paradoha-gh.com`.
+
+## Create Your Account
+
+Follow these steps to sign up and access your dashboard.
+
+<Steps>
+  <Step title="Visit Paradoha gh" icon="globe">
+
+    Open your browser and navigate to [https://app.paradoha-gh.com](https://app.paradoha-gh.com).
+
+  </Step>
+  <Step title="Sign Up" icon="user-plus">
+
+    Click the **Sign Up** button. Enter your email, create a strong password, and provide your full name.
+
+    <Callout kind="tip">
+
+      Use a business email for team collaboration features.
+
+    </Callout>
+
+  </Step>
+  <Step title="Verify Email" icon="mail">
+
+    Check your inbox for a verification email from Paradoha gh. Click the link to confirm your account.
+
+  </Step>
+  <Step title="Log In" icon="log-in">
+
+    Return to the login page and sign in with your credentials. You now land on the dashboard.
+
+  </Step>
+</Steps>
+
+## Create Your First Documentation Space
+
+A documentation space organizes your project docs. Create one in seconds.
+
+<Steps>
+  <Step title="New Space" icon="plus">
+
+    From the dashboard, click **New Space** in the top-right corner.
+
+  </Step>
+  <Step title="Configure Space" icon="settings">
+
+    Enter a name like `My Project Docs`, select a template (e.g., "Software Project"), and choose visibility: public, private, or team-only.
+
+  </Step>
+  <Step title="Publish Space" icon="rocket">
+
+    Click **Create Space**. Your new space appears in the sidebar. It includes starter pages like `introduction.mdx` and `quickstart.mdx`.
+
+  </Step>
+</Steps>
+
+## Upload Initial Project Files
+
+Add your existing Markdown files, images, or configs to the space.
+
+<Tabs>
+  <Tab title="Drag & Drop" icon="upload">
+
+    In your space editor:
+
+    1. Open the **Files** panel.
+    2. Drag files from your desktop directly into the upload zone.
+    3. Supported formats: `.mdx`, `.md`, `.png`, `.jpg`, `.json`.
+
+    Files auto-organize into folders like `docs/` or `assets/`.
+
+  </Tab>
+  <Tab title="CLI Upload" icon="terminal">
+
+    Use the Paradoha gh CLI for bulk uploads.
+
+````bash
+paradoha-gh login --email your@email.com
+paradoha-gh space select my-project-docs
+paradoha-gh upload ./src/docs/*.mdx --space my-project-docs
+````
+
+    This syncs your local `src/docs/` folder to the cloud space.
+
+  </Tab>
+</Tabs>
+
+<Callout kind="success">
+
+  Uploaded files appear instantly in your space sidebar. Edit them live in the MDX editor.
+
+</Callout>
+
+## Basic Interface Tour
+
+Familiarize yourself with key areas using this overview.
+
+<Columns cols={3}>
+  <Card title="Dashboard" icon="home" href="#dashboard">
+
+    Overview of your spaces, recent edits, and quick actions.
+
+  </Card>
+  <Card title="Editor" icon="edit-3" href="#editor">
+
+    Real-time MDX preview with syntax highlighting and component auto-complete.
+
+  </Card>
+  <Card title="Spaces Sidebar" icon="layers" href="#spaces">
+
+    Switch between projects, search docs, and manage permissions.
+
+  </Card>
+</Columns>
+
+## Next Steps
+
+Congratulations! You've set up Paradoha gh and created your first space.
+
+<Callout kind="tip">
+
+  Explore advanced features next. Customize your space with themes using the `{brandColor: "#3B82F6"}` option in settings.
+
+</Callout>
+
+<Columns cols={2}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+
+    Secure your spaces with API keys and team invites.
+
+  </Card>
+  <Card title="Customization Guide" icon="palette" href="/configuration">
+
+    Themes, components, and advanced MDX usage.
+
+  </Card>
+</Columns>
+
+Dive into editing your `quickstart.mdx` file to add custom components like `<Steps>` or `<Tabs>`. Your project docs are now live at `https://docs.paradoha-gh.com/my-project-docs`. Share the link with your team to collaborate.
